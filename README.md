@@ -190,7 +190,6 @@ Publish the website in the given URL.
             const lightboxImage = document.getElementById('lightbox-image');
             const lightboxClose = document.getElementById('lightbox-close');
 
-            // Open Lightbox
             galleryItems.forEach(item => {
                 item.addEventListener('click', () => {
                     const imageSrc = item.getAttribute('data-image');
@@ -199,7 +198,7 @@ Publish the website in the given URL.
                 });
             });
 
-            // Close Lightbox
+            
             lightboxClose.addEventListener('click', () => {
                 lightbox.classList.add('fade-out');
                 setTimeout(() => {
@@ -208,7 +207,7 @@ Publish the website in the given URL.
                 }, 300);
             });
 
-            // Close on Outside Click
+           
             lightbox.addEventListener('click', (e) => {
                 if (e.target === lightbox) {
                     lightbox.classList.add('fade-out');
